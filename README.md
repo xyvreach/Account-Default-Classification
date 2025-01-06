@@ -1,57 +1,55 @@
-# account-default-classification
+# Default Prediction Using Logistic Regression
 
-How to Use This Repository:
-Review the SAS script to understand the data processing and modeling steps.
-Refer to the Word document for a detailed walkthrough of the analysis.
-Use the findings and methodologies as a reference for similar classification problems.
+This repository contains an analysis and implementation of logistic regression to predict the likelihood of default on loans. The analysis uses the `Default.csv` dataset and explores relationships between variables such as `balance`, `income`, and `student` status.
 
-This repository contains an in-depth analysis of the Default.csv dataset using logistic regression in SAS Studio. The project simulates a real-world scenario where we are analyzing credit card default data to build a predictive model.
+## Features
+- **Dataset Analysis**:
+  - Summary statistics for key variables (`balance`, `income`) categorized by default and student status.
+  - Histograms visualizing distributions of `balance` and `income` across different groups.
+  
+- **Logistic Regression Model**:
+  - Predicts default likelihood based on `balance`, `income`, and `student` status.
+  - Includes model evaluation using stepwise regression for feature selection.
 
-This repo showcases the application of logistic regression for classification tasks in a financial context. It provides a practical example of how to:
+- **Prediction Example**:
+  - Uses the model to predict the default probability for a student with a balance of $621 and an income of $1,850.
 
-Explore and summarize data.
-Perform conditional analyses.
-Build and interpret a logistic regression model.
-Make data-driven predictions.
+## Files
+- **`Default.csv`**: The dataset used for analysis.
+- **`default_prediction_model_logistic_regression_classification.sas`**: SAS script for logistic regression and prediction tasks.
+- **`SAS_AnalysisReport_Datamining_LRegression.docx`**: Analysis report summarizing key insights and results.
 
-Key Components:
-Summary Statistics and Histograms:
+## Key Results
+- Higher `balance` increases the likelihood of default.
+- Students are less likely to default than non-students.
+- Example prediction:
+  - A student with a balance of $621 and an income of $1,850 has a predicted default probability of approximately **0.037%**.
 
-Generated for the variables balance and income across the entire dataset.
-Provided insights into the distribution and key characteristics of these financial variables.
+## Requirements
+To replicate the analysis, the following software and libraries are required:
+- **SAS** for running the provided code.
+- A compatible environment to view and edit the dataset.
 
-Conditional Analysis Based on Groups:
+## How to Use
+1. Load the dataset (`Default.csv`) into your SAS environment.
+2. Run the SAS script (`default_prediction_model_logistic_regression_classification.sas`) to:
+   - Analyze the dataset.
+   - Train the logistic regression model.
+   - Predict default probabilities.
+3. Review the detailed analysis in the accompanying report (`SAS_AnalysisReport_Datamining_LRegression.docx`).
 
-Computed summary statistics and histograms for balance and income segmented by:
-Default Status (default = Yes/No)
-Student Status (student = Yes/No)
-Analyzed four distinct groups:
-Defaulted & Student
-Defaulted & Non-Student
-Non-Defaulted & Student
-Non-Defaulted & Non-Student
-Highlighted how default rates and financial variables differ across these segments.
+## Summary Statistics
+- **Balance**:
+  - Mean: $835.37
+  - Std Dev: $483.71
+  - Range: $0 - $2,654.32
+- **Income**:
+  - Mean: $33,516.98
+  - Std Dev: $13,336.64
+  - Range: $771.97 - $73,554.23
 
-Logistic Regression Modeling:
+## License
+This project is open for educational and personal use. Contributions and enhancements are welcome.
 
-Built a logistic regression model with default as the response variable.
-Included student, balance, and income as predictor variables.
-Assessed the significance of each predictor and the overall model fit.
-Interpreted the output to understand the impact of each variable on the likelihood of default.
-
-Probability Prediction for a New Applicant:
-
-Calculated the probability of default for a hypothetical applicant:
-Student status: Yes
-Balance: $621
-Income: $1,850
-Demonstrated the use of the logistic regression model to make real-world predictions.
-Included step-by-step calculations and explanations.
-
-Documentation:
-All SAS code used for data analysis and modeling.
-Output screenshots of statistical results and histograms.
-A comprehensive Word document containing:
-Labeled SAS codes and outputs.
-Detailed explanations and interpretations of results.
-Answers to all assignment questions.
+## Contributing
+Feel free to submit pull requests or open issues to suggest improvements or additional features.
